@@ -5,8 +5,11 @@
  */
 package esercizioscacchiera;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
+import java.awt.GradientPaint;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import javax.swing.JFrame;
 
 /**
@@ -24,6 +27,7 @@ public class GUI extends JFrame {
         int altezza = spazio;  //altezza quadrato
         int colonne = 8;
         int righe = 8;
+        GradientPaint whiteGradient = new GradientPaint(x, y, Color.RED, x + 800, y + 800, Color.ORANGE);
 
         super.paint(g); //To change body of generated methods, choose Tools | Templates.
         for (int i = 0; i < righe; i++) {
@@ -46,6 +50,11 @@ public class GUI extends JFrame {
                 x = x + spazio;
             }
         }
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setStroke(new BasicStroke(80));
+        g2.setPaint(whiteGradient);
+        g2.drawRect(520, 110, 880, 880);
+
     }
 
 }

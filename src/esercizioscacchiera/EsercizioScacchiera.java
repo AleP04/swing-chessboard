@@ -18,6 +18,7 @@ public class EsercizioScacchiera {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException {
         initUI();
@@ -32,6 +33,7 @@ public class EsercizioScacchiera {
         JPanel p = new JPanel();
         p.setBackground(Color.WHITE);
         w.getContentPane().add(new Background ("src/resources/images/wood.jpg"));
+        
     }
 
 }
